@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
+int i=0;
 void login();
 void sing_up(); 
 void database();
-int i=1;
+
 string email,passWord1,passWord2;
 
 
@@ -16,6 +17,7 @@ int main(){
         cout << "For start *1* or exit *0*: ";
         cin >> work;
         if(!work){
+            cout <<"exit";
             return 0;
         } else if(work){
             cout << "please enter your choise : "<< endl;
@@ -25,7 +27,7 @@ int main(){
                 sing_up();
             } else if (choise == 'B'){
                 login();
-                debug();
+                database();
                 i++;
             } else {
                 cout << "Err";
@@ -61,13 +63,12 @@ void sing_up(){
 }
 
 void database(){
-    string  user[i][2];
+    string  user[10][2];
     user[i][0] = email;
     user[i][1] = passWord1;
-}
-
-void debug(){
-    for(int j=1;j<=i;j++){
-        cout << user[j][2];
+    cout << i << endl;
+    for(int j=0;j<=i;j++){
+        cout << user[j][0] << endl;
+        cout << user[j][1] << endl;
     }
 }
