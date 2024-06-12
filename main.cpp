@@ -5,8 +5,8 @@ int i=0;
 void login();
 void sing_up(); 
 void database();
-
 string email,passWord1,passWord2;
+string  user[10][2];
 
 
 int main(){
@@ -63,7 +63,6 @@ void sing_up(){
 }
 
 void database(){
-    string  user[10][2];
     user[i][0] = email;
     user[i][1] = passWord1;
     cout << i << endl;
